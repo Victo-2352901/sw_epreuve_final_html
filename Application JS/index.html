@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW Épreuve Final</title>
+
+    <script defer src="Scripts/script.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="headers">
+        <h1>Épreuve final - Services Web H25</h1>
+        <p>Anthony Ramsay</p>
+    </div>
+        <div class="body-container">
+            <div class="creation-container">
+            <h3>Création d'un utilisateur</h3>
+            <div class="creation">
+
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom">
+
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom">
+
+                <label for="courriel">Courriel</label>
+                <input type="text" name="courriel" id="courriel" placeholder="Votre courriel">
+
+                <label for="mot_de_passe">Mot de passe</label>
+                <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="*********">
+            
+                <button id="creer-utilisateur">Créer</button>
+            </div>
+        </div>
+        <div class="recuperation-container">
+            <div class="recuperation">
+                <h3>Récupération d'une clé d'api</h3>
+
+                <label for="courriel_recuperation">Courriel</label>
+                <input type="text" name="courriel_recuperation" id="courriel_recuperation" placeholder="Votre courriel">
+
+                <label for="mot_de_passe_recuperation">Mot de passe</label>
+                <input type="password" name="mot_de_passe_recuperation" id="mot_de_passe_recuperation" placeholder="*********">
+            
+                <div id="container-checkbox">
+                    <input type="checkbox" name="checkbox-generer" id="checkbox-generer">
+                    <label for="checkbox-generer">Générer une nouvelle clé</label>
+                </div>
+
+                <button id="bouton-recuperer">Récupérer</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
