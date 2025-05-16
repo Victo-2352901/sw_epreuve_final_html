@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "dbc05a78-0a89-424c-aa03-1ca76ce9ec61",
+		"name": "sw_épreuvefinale_2352901",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41199161"
+	},
+	"item": [
+		{
+			"name": "AjouterUtilisateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Essai1\",\r\n    \"prenom\":\"asd\",\r\n    \"courriel\":\"asdasd.com\",\r\n    \"mot_de_passe\":\"mot_de_passe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/utilisateurs/ajout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"utilisateurs",
+						"ajout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer la clé d'api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/utilisateurs/recupererCleApi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"utilisateurs",
+						"recupererCleApi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListeTache",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/iste/tout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"iste",
+						"tout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DetailTache",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/liste/detail?nom=Première tache",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"liste",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "nom",
+							"value": "Première tache"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter une tâche",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Ajout tache de postman\",\r\n    \"description\":\"wesh\",\r\n    \"date_debut\":\"2006-01-19\",\r\n    \"date_echeance\":\"2025-04-21\",\r\n    \"complete\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/taches/ajouter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"taches",
+						"ajouter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier une tache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Première tache\",\r\n    \"description\" : \"newTitle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/taches/modifier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"taches",
+						"modifier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier le status d'une tache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"millieme tache\",\r\n    \"complete\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/taches/modifier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"taches",
+						"modifier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer une tâche",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"complete_taches\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/taches/supprimer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"taches",
+						"supprimer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer une sous tache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tache_id\": \"2\",\r\n  \"titre\": \"creation sous tache\",\r\n  \"complete\": \"0\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sous-taches/ajouter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sous-taches",
+						"ajouter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier la sous tache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Faire les courses\",\r\n  \"nouveauTitre\": \"modifier sous tache\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sous-taches/modifer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sous-taches",
+						"modifer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier le status de la sous tache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Faire les courses du samedi\",\r\n  \"complete\": \"1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sous-taches/modifierStatut",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sous-taches",
+						"modifierStatut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier le status de la sous tache Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"modifier sous tache\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sous-taches/supprimer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sous-taches",
+						"supprimer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
