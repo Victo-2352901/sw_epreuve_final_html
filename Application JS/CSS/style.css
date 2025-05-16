@@ -26,7 +26,7 @@ body{
 } */
 .creation-container,
 .recuperation-container {
-    width: 50%; /* au lieu de 100%, sinon ça déborde */
+    width: 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
